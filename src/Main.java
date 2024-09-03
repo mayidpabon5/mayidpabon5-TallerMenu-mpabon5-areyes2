@@ -1,3 +1,5 @@
+import com.sun.source.tree.WhileLoopTree;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -23,7 +25,7 @@ public class Main {
                     "\n-       ARNOLD REYES (AREYES2)         -" +
                     "\n-        MAYID PABÓN (MPABON5)         -" +
                     "\n----------------------------------------" +
-                    "\n-1.           Datos primitivos.        -"          +
+                    "\n-1.           Datos primitivos.        -" +
                     "\n-2.               String.              -" +
                     "\n-3.             Constantes.            -" +
                     "\n-4.         Tipo de operadores.        -" +
@@ -36,11 +38,11 @@ public class Main {
                     "\n-0.                 Salir              -" +
                     "\n----------------------------------------" +
                     "\nDigite una opción:");
-            a= scannera.nextInt();
+            a = scannera.nextInt();
 
             // Bucle que controla que la condición ingresada en el menu principal sea valida
             while (a < 0 || a > 10) {
-                System.out.println("ingrese numero valido");
+               System.out.println("ingrese numero valido");
                 a = scannera.nextInt();
             }
             switch (a) {
@@ -62,7 +64,7 @@ public class Main {
                                 "\nDigite una opción:");
                         b = scannerb.nextInt();
                         //IF controla la opción salir del menu de datos primitivos
-                        if (b == 0){
+                        if (b == 0) {
                             System.out.println("Eligio salir del menu datos primitivos, digite Enter para salir ");
                             break;
                         }
@@ -148,7 +150,7 @@ public class Main {
                                         "\n---------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu datos primitivos");
                                 break;
-                            }else {
+                            } else {
                                 //mensaje para controla que se elija una opción correcta en datos primitivos
                                 while (b < 0 || b > 8) {
                                     System.out.println("Por favor digite opciones del submenu datos primitivos");
@@ -201,7 +203,7 @@ public class Main {
                                 "\n Digite una opción:");
                         b = scannerb.nextInt();
                         //IF controla la opción salir del menu tipo de operadores
-                        if (b == 0){
+                        if (b == 0) {
                             System.out.println("Eligio salir del menu Tipos de operadores, digite Enter para salir ");
                             break;
                         }
@@ -221,7 +223,7 @@ public class Main {
                                         "\n----------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu Tipo de operadores");
                                 break;
-                            } else if (b == 2){
+                            } else if (b == 2) {
                                 System.out.println("----------------------------------------" +
                                         "\n            Relacionales" +
                                         "\n----------------------------------------" +
@@ -234,7 +236,7 @@ public class Main {
                                         "\n----------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu Tipo de operadores");
                                 break;
-                            } else if (b == 3){
+                            } else if (b == 3) {
                                 System.out.println("----------------------------------------" +
                                         "\n              Logicos" +
                                         "\n----------------------------------------" +
@@ -243,7 +245,7 @@ public class Main {
                                         "\n----------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu Tipo de operadores");
                                 break;
-                            } else if (b == 4){
+                            } else if (b == 4) {
                                 System.out.println("----------------------------------------" +
                                         "\n             Asignación" +
                                         "\n----------------------------------------" +
@@ -257,7 +259,7 @@ public class Main {
                                         "\n----------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu Tipo de operadores");
                                 break;
-                            } else if (b == 5){
+                            } else if (b == 5) {
                                 System.out.println("----------------------------------------" +
                                         "\n        Incremento/Decremento" +
                                         "\n----------------------------------------" +
@@ -271,7 +273,7 @@ public class Main {
                                         "\nDecremento: --.");
                                 System.out.println("Digita Enter para regresar al menu Tipo de operadores");
                                 break;
-                            }else {
+                            } else {
                                 //mensaje para controla que se elija una opción correcta en Tipo de operadores
                                 while (b < 0 || b > 5) {
                                     System.out.println("Por favor digite opciones del submenu Tipo de operadores");
@@ -282,20 +284,360 @@ public class Main {
                         menu2 = scannermenu2.nextLine();
                     } while (menu2.isEmpty());
                     break;
-                case 5 :
-                    System.out.println("----------------------------------------" +
-                            "\n       Condicional IF, ELSE IF ELSE" +
-                            "\n----------------------------------------" +
-                            "\n-1.         Explicación de IF" +
-                            "\n-2.        Explicación de ELSE IF" +
-                            "\n-3.        Explicación del ELSE" +
-                            "\n-4.     Programa de IF, ELSE IF/ELSE" +
-                            "\n-0.                 Salir" +
-                            "n---------------------------------------");
-                    System.out.println("Digite una opción:");
-                    b = scannerb.nextInt();
-            }
-            menuprincipal = scannermenuprincipal.nextLine();
-        }while(menuprincipal.isEmpty());
-    }
+                case 5:
+                    do {
+                        System.out.println("----------------------------------------" +
+                                "\n       Condicional IF, ELSE IF ELSE" +
+                                "\n----------------------------------------" +
+                                "\n-1.         Explicación de IF" +
+                                "\n-2.        Explicación de ELSE IF" +
+                                "\n-3.        Explicación del ELSE" +
+                                "\n-4.     Programa de IF, ELSE IF/ELSE" +
+                                "\n-0.                 Salir" +
+                                "\n---------------------------------------");
+                        System.out.println("Digite una opción:");
+                        b = scannerb.nextInt();
+                        //IF controlar la opción para salir del menú Condicional
+                        if (b == 0) {
+                            System.out.println("Eligio salir del menu Condicional IF, ELSE IF ELSE, digite Enter para salir ");
+                            break;
+                        }
+                        //Bucle que controla que la condición ingresada en el menu Condicional IF, ELSE IF ELSE sea valida
+                        do {
+                            if (b == 1) {
+                                System.out.println("----------------------------------------" +
+                                        "\n            IF          " +
+                                        "\n----------------------------------------" +
+                                        "\nLa estructura condicional más simple en Java es el if," +
+                                        "\nse evalúa una condición y en caso de que se cumpla" +
+                                        "\nse ejecuta el contenido entre las llaves {} " +
+                                        "\no en caso de que se omitan se ejecuta el código " +
+                                        "\nhasta el primer «;» por lo tanto si no se usan los {} " +
+                                        "\nla condición aplica solo a la siguiente instrucción al if." +
+                                        "\n----------------------------------------");
+                                System.out.println("Digita Enter para regresar al menu Condicional IF, ELSE IF ELSE");
+                                break;
+                            } else if (b == 2) {
+                                System.out.println("----------------------------------------" +
+                                        "\n            ELSE IF          " +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \nEl siguiente nivel es hacer el else condicional
+                                                  añadiendo un if para que si no se cumple la primera
+                                                  condición (la del if principal) se evalue esta nueva
+                                                  condición de modo que se puede concatenar la cantidad
+                                                  de if else que se necesiten para cubrir todos los
+                                                  distintos escenarios que precisen ser tratados de una
+                                                  forma particular, siendo el ultimo else el que se
+                                                  ejecute cuando no se cumpla ninguna condición
+                                                  (el else es siempre opcional).
+                                                \n Por ejemplo:
+                                                \n
+                                                           if (temperatura > 25) {
+                                                               // Si la temperatura es mayor que 25 ...
+                                                               System.out.println("A la playa!!!");
+                                                           } else if (temperatura > 15) {
+                                                               // si es mayor que 15 y no es mayor que 25 ..
+                                                               System.out.println("A la montaña!!!");
+                                                           } else if (temperatura < 5 && nevando) {
+                                                               // si es menor que 5 y esta nevando y no es mayor que 15 ni mayor que 25
+                                                               System.out.println("A esquiar!!!");
+                                                           } else {
+                                                               // si la tempera  no es mayor que 25 ni que 15 ni menor que 5 si esta nevando
+                                                               System.out.println("A descansar... zZz");
+                                                           }                                                                                        
+                                                \n----------------------------------------
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Condicional IF, ELSE IF ELSE");
+                                break;
+                            } else if (b == 3) {
+                                System.out.println("----------------------------------------" +
+                                        "\n            ELSE         " +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \nECon el if solo podemos hacer que se ejecute un fragmento
+                                                 de código o no pero en el caso de que no se cumpla la 
+                                                 condición no se hace nada (sigue el flujo normal de ejecución)
+                                                 por lo que si queremos que se ejecute otra cosa cuando no se
+                                                 cumpla la condición solo con el if tenemos que hacer otro con
+                                                 la condición inversa provocando que se tenga que comprobar 
+                                                 la condición 2 veces mientras que si usamos el else solo 
+                                                 necesitamos hacer la comprobación una sola vez.
+                                                \n Por ejemplo:
+                                                \n
+                                                if (temperatura > 25) {
+                                                    System.out.println("A la playa!!!");
+                                                }
+                                                                                        
+                                                if (temperatura <= 25) {
+                                                    System.out.println("Esperando al buen tiempo...");
+                                                }
+                                                                                        
+                                                // Usando if con else
+                                                // Si la temperatura es mayor que 25 ... y si no ...
+                                                if (temperatura > 25) {
+                                                    System.out.println("A la playa!!!");
+                                                } else {
+                                                    System.out.println("Esperando al buen tiempo...");
+                                                }
+                                                \n----------------------------------------
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Condicional IF, ELSE IF ELSE");
+                                break;
+                            } else if (b == 4) {
+                                System.out.println("----------------------------------------" +
+                                        "\n            Programa de IF, ELSE IF/ELSE         " +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \nVeamos un ejemplo:
+                                                \n
+                                                  import java.util.Scanner;
+                                                  
+                                                  public class Main {
+                                                  
+                                                      public static void main(String[] args) {
+                                                          //número ingresado indique si la persona
+                                                          //	es niño, joven, adulto o tercera edad teniendo en cuenta los siguientes rangos:
+                                                          //		- de 0 a 12 años es niño
+                                                          //		- de 13 a 20 años es jóven
+                                                          //		- de 21 a 60 años es adulto
+                                                          //		- de 61 en adelante es tercera edad
+                                                          int edad;
+                                                          System.out.println("ingrese edad:");
+                                                          Scanner scaneredad=new Scanner (System.in);
+                                                          edad=scaneredad.nextInt ();
+                                                          System.out.println("edad ingresada" + " " +edad);
+                                                  
+                                                          if (edad >= 0 && edad < 13) {
+                                                              System.out.println("es nino");
+                                                          } else if (edad > 12 && edad <= 20) {
+                                                  
+                                                              System.out.println("es joven");
+                                                          }
+                                                          else if (edad >20 && edad <=60){
+                                                              System.out.println("es adulto");
+                                                  
+                                                          }
+                                                          else if (edad >60) {
+                                                              System.out.println("tercera edad");
+                                                          }
+                                                      }
+                                                  
+                                                  """);
+                                System.out.println("Digita Enter para regresar al menu Condicional IF, ELSE IF ELSE");
+                                break;
+                            } else {
+                                //mensaje para controla que se elija una opción correcta en Tipo de operadores
+                                while (b < 0 || b > 4) {
+                                    System.out.println("Por favor digite opciones del submenu Condicional IF, ELSE IF ELSE");
+                                    b = scannerb.nextInt();
+                                }
+                            }
+                        } while (b >= 1 || b <= 4);
+                        menu2 = scannermenu2.nextLine();
+                    } while (menu2.isEmpty());
+                    break;
+                case 6:
+                    do {
+                        System.out.println("---------------------------------------" +
+
+                                "\n----------------------------------------" +
+                                "\n-1.          Condicional SWITCH                " +
+                                "\n-2.          Programa Calificación" +
+                                "\n-0           Salir             " +
+                                "\n Digite una opción:");
+                        b = scannerb.nextInt();
+                        //IF controla la opción salir del menu tipo de operadores
+                        if (b == 0) {
+                            System.out.println("Eligio salir del menu Condicional SWITCH, digite Enter para salir ");
+                            break;
+                        }
+                        //Bucle que controla que la condición ingresada en el menu tipo de operadores sea valida
+                        do {
+                            if (b == 1) {
+                                System.out.println("---------------------------------------" +
+                                        "\n           Condicional SWITCH" +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \n    
+                                                       El switch en Java es una estructura de control
+                                                       que permite ejecutar diferentes bloques de código
+                                                       en función del valor de una variable. Imagina que
+                                                       tienes un semáforo con múltiples luces; 
+                                                       el switch actúa como un operador que selecciona
+                                                       qué luz encender basado en el estado actual del 
+                                                       tráfico. En Java, esta estructura es ideal cuando
+                                                       se tienen múltiples caminos posibles y se desea 
+                                                       simplificar la lógica de decisión.
+                                                                                
+                                                       \nPor ejemplo, considera el siguiente código básico:
+
+                                                       int numero = 2;
+                                                       switch (numero) {
+                                                                   case 1:
+                                                                        System.out.println("Uno");
+                                                                        break;
+                                                                   case 2:
+                                                                        System.out.println("Dos");
+                                                                        break;
+                                                                        default:
+                                                                        System.out.println("Otro número");
+                                                                        }
+                                                 \n
+                                                       Aquí, el switch evalúa el valor de numero. Si es 1, imprime "Uno";
+                                                       si es 2, imprime "Dos"; y si es cualquier otro número, imprime
+                                                       "Otro número".\n
+
+                                                                      Sintaxis de la Sentencia Switch
+                                                                                
+                                                \n
+                                                      La sintaxis de una sentencia switch es crucial para su correcto
+                                                      funcionamiento. Debes definir claramente la variable a evaluar
+                                                      y luego enumerar los diferentes casos (cases) que quieres considerar.
+                                                      Cada caso debe finalizar con un break para evitar que se ejecuten los
+                                                      casos siguientes, a menos que desees un comportamiento específico.
+                                                                     
+                                                \n---------------------------------------
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu principal");
+                                break;
+                            } else if (b == 2) {
+                                System.out.println("----------------------------------------" +
+                                        """
+                                                \n Programa calificación.
+                                                \n
+                                                \n
+                                                import java.util.Scanner;
+                                                                                                
+                                                public class Main {
+                                                    //Desarrolla un programa que de acuerdo a la calificación númerica ingresada, indique en qué categoría se encuentra la nota.
+                                                    // El número que se debe ingresar debe ser en el rango de 1 a 10,
+                                                    //Tenga en cuanta los siguientes datos de acuerdo al número ingresado:
+                                                    //- Si es 1 o 2 imprime "Su calificación es: F"
+                                                    //- Si es 3 o 4 imprime "Su calificación es: D"
+                                                    //- Si es 5 o 6 imprime "Su calificación es: C"
+                                                    //- Si es 7 o 8 imprime "Su calificación es: B"
+                                                    //- Si es 9 o 10 imprime "Su calificación es: A"
+                                                    //- Si es diferente al rango imprime "Número no válido, por favor verifique
+                                                                                                
+                                                                                                
+                                                    public static void main(String[] args) {
+                                                    int nota;
+                                                        System.out.println("ingrese nota");
+                                                        Scanner scaneredad = new Scanner(System.in);
+                                                        nota = scaneredad.nextInt();
+                                                                                                
+                                                        if (nota<=10){
+                                                        switch (nota) {
+                                                            case 1,2:
+                                                                System.out.println("Su calificación es: F");
+                                                                break;
+                                                            case 3,4:
+                                                                System.out.println("Su calificación es: D");
+                                                                break;
+                                                            case 5,6:
+                                                                System.out.println("Su calificación es: C");
+                                                                break;
+                                                            case 7,8:
+                                                                System.out.println("Su calificación es: B");
+                                                                break;
+                                                            case 9,10:
+                                                                System.out.println("Su calificación es: A");
+                                                                break;
+                                                        }
+                                                                                                
+                                                        }else {
+                                                            System.out.println("Número no válido, por favor verifique");
+                                                        }
+                                                                                                
+                                                    }
+                                                }
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Tipo de operadores");
+                                break;
+                            } else {
+                                //mensaje para controla que se elija una opción correcta en el menu
+                                while (b < 0 || b > 2) {
+                                    System.out.println("Por favor digite opciones del submenu SWITCH");
+                                    b = scannerb.nextInt();
+                                }
+
+                            }
+                        } while (b >= 1 || b <= 2);
+                        menu2 = scannermenu2.nextLine();
+                    } while (menu2.isEmpty());
+                    break;
+                case 7:
+                    do {
+                        System.out.println("---------------------------------------" +
+                                "\n           Condicional TERNARIO" +
+                                "\n----------------------------------------" +
+                                "\n-1.            Qué es un condicional Ternario" +
+                                "\n-2.            Programa numero par o impar" +
+                                "\n-0             Salir    " +
+                                "\n Digite una opción:");
+                        b = scannerb.nextInt();
+                        if (b == 0) {
+                            System.out.println("Eligio salir del menu condicional ternario, digite Enter para salir ");
+                            break;
+                        }
+                        //Bucle que controla que la condición ingresada en el menu  sea valida
+                        do {
+                            if (b == 1) {
+                                System.out.println("---------------------------------------" +
+                                        "\n           Condicional TERNARIO" +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \n
+                                                        En ocasiones un if se utiliza simplemente para obtener
+                                                        un valor u otro en función de si una se cumple una
+                                                        condición o no, en estos casos se puede sustituir la
+                                                        estructura if else por el operador ternario u operador
+                                                        condicional que tiene la sintaxis
+                                                        resultado = condicion ? valor_si_se_cumple : valor_si_no_se_cumple
+                                                        los valores tanto para el caso de que se cumpla 
+                                                        como para el que no pueden ser valores directamente como
+                                                        un texto o un entero o llamadas a funciones que devuelvan
+                                                        un objeto del tipo esperado.
+                                                                                    
+                                                                                    
+                                                        // Ejemplo 1
+                                                        String queHacer = (temperatura > 25) ? "A la playa!!!" : "Esperando al buen tiempo...";
+                                                                                    
+                                                        // Ejemplo 2
+                                                        double numero = (temperatura > 10) ? (Math.random() * 10) : 0;
+                                                                                    
+                                                        // Ejemplo 3
+                                                        Comida miComida = cansado ? pedirComida("china") : hacerComida();\s
+                                                                            
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Condicional ternario");
+                                break;
+                            } else if (b == 2) {
+                                System.out.println("----------------------------------------");
+
+                                System.out.println("Digita Enter para regresar al menu Condicional ternario");
+                                break;
+                            } else {
+                                //mensaje para controla que se elija una opción correcta en Tipo de operadores
+                                while (b < 0 || b > 5) {
+                                    System.out.println("Por favor digite opciones del submenu Tipo de operadores");
+                                    b = scannerb.nextInt();
+                                }
+                            }
+                        } while (b >= 1 || b <= 2);
+                        menu2 = scannermenu2.nextLine();
+                    } while (menu2.isEmpty());
+                    break;
+            // Salir del programa.
+            case 0:
+                System.out.println("Vas a salir del menú, presiona enter para continuar");
+                break;
+
+        }
+        menuprincipal = scannermenuprincipal.nextLine();
+    } while (a!=0);
+    //while (menuprincipal.isEmpty()) ;
+
+}
 }
