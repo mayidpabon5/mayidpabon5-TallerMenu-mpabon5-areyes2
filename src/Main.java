@@ -160,7 +160,7 @@ public class Main {
                         } while (b >= 1 || b <= 8);
                         menu2 = scannermenu2.nextLine();
                     } while (menu2.isEmpty());
-                    break;
+                      break;
                 case 2:
                     System.out.println("----------------------------------------" +
                             "\n                  String" +
@@ -386,22 +386,8 @@ public class Main {
                                 break;
                             } else if (b == 4) {
                                 System.out.println("----------------------------------------" +
-                                        "\n            Programa de IF, ELSE IF/ELSE         " +
-                                        "\n----------------------------------------" +
-                                        """
-                                                \nVeamos un ejemplo:
-                                                \n
-                                                  import java.util.Scanner;
-                                                  
-                                                  public class Main {
-                                                  
-                                                      public static void main(String[] args) {
-                                                          //número ingresado indique si la persona
-                                                          //	es niño, joven, adulto o tercera edad teniendo en cuenta los siguientes rangos:
-                                                          //		- de 0 a 12 años es niño
-                                                          //		- de 13 a 20 años es jóven
-                                                          //		- de 21 a 60 años es adulto
-                                                          //		- de 61 en adelante es tercera edad
+                                        "\n            Programa de IF, ELSE IF/ELSE         " );
+
                                                           int edad;
                                                           System.out.println("ingrese edad:");
                                                           Scanner scaneredad=new Scanner (System.in);
@@ -421,9 +407,8 @@ public class Main {
                                                           else if (edad >60) {
                                                               System.out.println("tercera edad");
                                                           }
-                                                      }
-                                                  
-                                                  """);
+
+
                                 System.out.println("Digita Enter para regresar al menu Condicional IF, ELSE IF ELSE");
                                 break;
                             } else {
@@ -440,9 +425,9 @@ public class Main {
                 case 6:
                     do {
                         System.out.println("---------------------------------------" +
-
+                                "\n             Condicional SWITCH" +
                                 "\n----------------------------------------" +
-                                "\n-1.          Condicional SWITCH                " +
+                                "\n-1.          Condicional SWITCH                "+
                                 "\n-2.          Programa Calificación" +
                                 "\n-0           Salir             " +
                                 "\n Digite una opción:");
@@ -499,31 +484,14 @@ public class Main {
                                                                      
                                                 \n---------------------------------------
                                                 """);
-                                System.out.println("Digita Enter para regresar al menu principal");
+                                System.out.println("Digita Enter para regresar al menu Condicional SWITCH");
                                 break;
                             } else if (b == 2) {
                                 System.out.println("----------------------------------------" +
-                                        """
-                                                \n Programa calificación.
-                                                \n
-                                                \n
-                                                import java.util.Scanner;
-                                                                                                
-                                                public class Main {
-                                                    //Desarrolla un programa que de acuerdo a la calificación númerica ingresada, indique en qué categoría se encuentra la nota.
-                                                    // El número que se debe ingresar debe ser en el rango de 1 a 10,
-                                                    //Tenga en cuanta los siguientes datos de acuerdo al número ingresado:
-                                                    //- Si es 1 o 2 imprime "Su calificación es: F"
-                                                    //- Si es 3 o 4 imprime "Su calificación es: D"
-                                                    //- Si es 5 o 6 imprime "Su calificación es: C"
-                                                    //- Si es 7 o 8 imprime "Su calificación es: B"
-                                                    //- Si es 9 o 10 imprime "Su calificación es: A"
-                                                    //- Si es diferente al rango imprime "Número no válido, por favor verifique
-                                                                                                
-                                                                                                
-                                                    public static void main(String[] args) {
+                                                "\n Programa calificación");
+
                                                     int nota;
-                                                        System.out.println("ingrese nota");
+                                                        System.out.println("Ingrese su calificación:");
                                                         Scanner scaneredad = new Scanner(System.in);
                                                         nota = scaneredad.nextInt();
                                                                                                 
@@ -549,11 +517,8 @@ public class Main {
                                                         }else {
                                                             System.out.println("Número no válido, por favor verifique");
                                                         }
-                                                                                                
-                                                    }
-                                                }
-                                                """);
-                                System.out.println("Digita Enter para regresar al menu Tipo de operadores");
+
+                                System.out.println("Digita Enter para regresar al menu Condicional SWITCH");
                                 break;
                             } else {
                                 //mensaje para controla que se elija una opción correcta en el menu
@@ -614,13 +579,23 @@ public class Main {
                                 System.out.println("Digita Enter para regresar al menu Condicional ternario");
                                 break;
                             } else if (b == 2) {
-                                System.out.println("----------------------------------------");
+                                System.out.println("----------------------------------------"+
+                                        "\nPrograma operador ternario validar número impar o par"+
+                                        "\n----------------------------------------");
 
+                                System.out.println("Ingresar un numero entero");
+                                int c;
+                                Scanner scannerc = new Scanner(System.in);
+                                c = scannerc.nextInt();
+
+                                String salida = (c % 2==0)? "par": "impar";
+                                System.out.println("El número es "+ salida +
+                                        "\n----------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu Condicional ternario");
                                 break;
                             } else {
                                 //mensaje para controla que se elija una opción correcta en Tipo de operadores
-                                while (b < 0 || b > 5) {
+                                while (b < 0 || b > 2) {
                                     System.out.println("Por favor digite opciones del submenu Tipo de operadores");
                                     b = scannerb.nextInt();
                                 }
