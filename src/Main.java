@@ -42,7 +42,7 @@ public class Main {
 
             // Bucle que controla que la condición ingresada en el menu principal sea valida
             while (a < 0 || a > 10) {
-               System.out.println("ingrese numero valido");
+                System.out.println("ingrese numero valido");
                 a = scannera.nextInt();
             }
             switch (a) {
@@ -160,7 +160,7 @@ public class Main {
                         } while (b >= 1 || b <= 8);
                         menu2 = scannermenu2.nextLine();
                     } while (menu2.isEmpty());
-                      break;
+                    break;
                 case 2:
                     System.out.println("----------------------------------------" +
                             "\n                  String" +
@@ -386,27 +386,25 @@ public class Main {
                                 break;
                             } else if (b == 4) {
                                 System.out.println("----------------------------------------" +
-                                        "\n            Programa de IF, ELSE IF/ELSE         " );
+                                        "\n            Programa de IF, ELSE IF/ELSE         ");
 
-                                                          int edad;
-                                                          System.out.println("ingrese edad:");
-                                                          Scanner scaneredad=new Scanner (System.in);
-                                                          edad=scaneredad.nextInt ();
-                                                          System.out.println("edad ingresada" + " " +edad);
-                                                  
-                                                          if (edad >= 0 && edad < 13) {
-                                                              System.out.println("es nino");
-                                                          } else if (edad > 12 && edad <= 20) {
-                                                  
-                                                              System.out.println("es joven");
-                                                          }
-                                                          else if (edad >20 && edad <=60){
-                                                              System.out.println("es adulto");
-                                                  
-                                                          }
-                                                          else if (edad >60) {
-                                                              System.out.println("tercera edad");
-                                                          }
+                                int edad;
+                                System.out.println("ingrese edad:");
+                                Scanner scaneredad = new Scanner(System.in);
+                                edad = scaneredad.nextInt();
+                                System.out.println("edad ingresada" + " " + edad);
+
+                                if (edad >= 0 && edad < 13) {
+                                    System.out.println("es nino");
+                                } else if (edad > 12 && edad <= 20) {
+
+                                    System.out.println("es joven");
+                                } else if (edad > 20 && edad <= 60) {
+                                    System.out.println("es adulto");
+
+                                } else if (edad > 60) {
+                                    System.out.println("tercera edad");
+                                }
 
 
                                 System.out.println("Digita Enter para regresar al menu Condicional IF, ELSE IF ELSE");
@@ -427,7 +425,7 @@ public class Main {
                         System.out.println("---------------------------------------" +
                                 "\n             Condicional SWITCH" +
                                 "\n----------------------------------------" +
-                                "\n-1.          Condicional SWITCH                "+
+                                "\n-1.          Condicional SWITCH                " +
                                 "\n-2.          Programa Calificación" +
                                 "\n-0           Salir             " +
                                 "\n Digite una opción:");
@@ -444,7 +442,7 @@ public class Main {
                                         "\n           Condicional SWITCH" +
                                         "\n----------------------------------------" +
                                         """
-                                                \n    
+                                        \n    
                                                        El switch en Java es una estructura de control
                                                        que permite ejecutar diferentes bloques de código
                                                        en función del valor de una variable. Imagina que
@@ -488,35 +486,35 @@ public class Main {
                                 break;
                             } else if (b == 2) {
                                 System.out.println("----------------------------------------" +
-                                                "\n Programa calificación");
+                                        "\n Programa calificación");
 
-                                                    int nota;
-                                                        System.out.println("Ingrese su calificación:");
-                                                        Scanner scaneredad = new Scanner(System.in);
-                                                        nota = scaneredad.nextInt();
-                                                                                                
-                                                        if (nota<=10){
-                                                        switch (nota) {
-                                                            case 1,2:
-                                                                System.out.println("Su calificación es: F");
-                                                                break;
-                                                            case 3,4:
-                                                                System.out.println("Su calificación es: D");
-                                                                break;
-                                                            case 5,6:
-                                                                System.out.println("Su calificación es: C");
-                                                                break;
-                                                            case 7,8:
-                                                                System.out.println("Su calificación es: B");
-                                                                break;
-                                                            case 9,10:
-                                                                System.out.println("Su calificación es: A");
-                                                                break;
-                                                        }
-                                                                                                
-                                                        }else {
-                                                            System.out.println("Número no válido, por favor verifique");
-                                                        }
+                                int nota;
+                                System.out.println("Ingrese su calificación:");
+                                Scanner scaneredad = new Scanner(System.in);
+                                nota = scaneredad.nextInt();
+
+                                if (nota <= 10) {
+                                    switch (nota) {
+                                        case 1, 2:
+                                            System.out.println("Su calificación es: F");
+                                            break;
+                                        case 3, 4:
+                                            System.out.println("Su calificación es: D");
+                                            break;
+                                        case 5, 6:
+                                            System.out.println("Su calificación es: C");
+                                            break;
+                                        case 7, 8:
+                                            System.out.println("Su calificación es: B");
+                                            break;
+                                        case 9, 10:
+                                            System.out.println("Su calificación es: A");
+                                            break;
+                                    }
+
+                                } else {
+                                    System.out.println("Número no válido, por favor verifique");
+                                }
 
                                 System.out.println("Digita Enter para regresar al menu Condicional SWITCH");
                                 break;
@@ -579,8 +577,8 @@ public class Main {
                                 System.out.println("Digita Enter para regresar al menu Condicional ternario");
                                 break;
                             } else if (b == 2) {
-                                System.out.println("----------------------------------------"+
-                                        "\nPrograma operador ternario validar número impar o par"+
+                                System.out.println("----------------------------------------" +
+                                        "\nPrograma operador ternario validar número impar o par" +
                                         "\n----------------------------------------");
 
                                 System.out.println("Ingresar un numero entero");
@@ -588,8 +586,8 @@ public class Main {
                                 Scanner scannerc = new Scanner(System.in);
                                 c = scannerc.nextInt();
 
-                                String salida = (c % 2==0)? "par": "impar";
-                                System.out.println("El número es "+ salida +
+                                String salida = (c % 2 == 0) ? "par" : "impar";
+                                System.out.println("El número es " + salida +
                                         "\n----------------------------------------");
                                 System.out.println("Digita Enter para regresar al menu Condicional ternario");
                                 break;
@@ -604,15 +602,215 @@ public class Main {
                         menu2 = scannermenu2.nextLine();
                     } while (menu2.isEmpty());
                     break;
-            // Salir del programa.
-            case 0:
-                System.out.println("Vas a salir del menú, presiona enter para continuar");
-                break;
+                case 8:
+                    do {
+                        System.out.println("---------------------------------------" +
+                                "\n          BUCLE DO WHILE" +
+                                "\n----------------------------------------" +
+                                "\n-1.            ¿Qué es un bucle Do While?" +
+                                "\n-2.            Programa adivina el número" +
+                                "\n-0             Salir    " +
+                                "\n Digite una opción:");
+                        b = scannerb.nextInt();
+                        if (b == 0) {
+                            System.out.println("Eligio salir del menu Bucle Do While, digite Enter para salir ");
+                            break;
+                        }
 
-        }
-        menuprincipal = scannermenuprincipal.nextLine();
-    } while (a!=0);
-    //while (menuprincipal.isEmpty()) ;
+                        //Bucle que controla que la condición ingresada en el menu  sea valida
+                        do {
+                            if (b == 1) {
+                                System.out.println("---------------------------------------" +
+                                        "\n           ¿Qué es un bucle Do While?" +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \n
+                                                Los ciclos do-while son una estructura
+                                                de control cíclica, que nos permiten 
+                                                ejecutar una o varias líneas de código 
+                                                de forma repetitiva sin necesidad de 
+                                                tener un valor inicial e incluso a veces
+                                                sin siquiera conocer cuándo se va a dar 
+                                                el valor final. Hasta ahí son similares 
+                                                a los ciclos while, sin embargo, el 
+                                                ciclo do-while nos permite añadir cierta
+                                                ventaja adicional puesto que nos permite
+                                                ejecutar primero el bloque de instrucciones
+                                                antes de evaluar la condición necesaria.
+                                                \n
+                                                Sintaxis del Ciclo Do-While en Java
+                                                \n
+                                                                do
+                                                                {
+                                                                        ....
+                                                                        ....
+                                                                    Bloque de Instrucciones....
+                                                                        ....
+                                                                        ....
+                                                                }
+                                                                while(condición de finalización);
+                                                        
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Bucle Do While");
+                                break;
+                            } else if (b == 2) {
+                                System.out.println("----------------------------------------" +
+                                        "\n Programa Adivina el número");
 
-}
+                                System.out.println("Digita Enter para regresar al menu Condicional SWITCH");
+                                break;
+                            } else {
+                                //mensaje para controla que se elija una opción correcta en Tipo de operadores
+                                while (b < 0 || b > 2) {
+                                    System.out.println("Por favor digite una opcióm  del submenu Bucle Do While");
+                                    b = scannerb.nextInt();
+                                }
+                            }
+                        } while (b >= 1 || b <= 2);
+                        menu2 = scannermenu2.nextLine();
+                    } while (menu2.isEmpty());
+                    break;
+                case 9:
+                    do {
+                        System.out.println("---------------------------------------" +
+                                "\n          BUCLE WHILE" +
+                                "\n----------------------------------------" +
+                                "\n-1.            ¿Qué es WHILE?" +
+                                "\n-2.            Programa Sumatoria de n números" +
+                                "\n-0             Salir    " +
+                                "\n Digite una opción:");
+                        b = scannerb.nextInt();
+                        if (b == 0) {
+                            System.out.println("Eligio salir del menu Bucle While, digite Enter para salir ");
+                            break;
+                        }
+                        do {
+                            if (b == 1) {
+                                System.out.println("---------------------------------------" +
+                                        "\n           ¿Qué es WHILE?" +
+                                        "\n----------------------------------------" +
+                                        """
+                                                \n
+                                                        El bucle while es tan sencillo como decir
+                                                        mientras se cumpla la condición se ejecuta
+                                                        el código que haya dentro del bucle, y en
+                                                        el momento que ya no se cumpla esa condición
+                                                        se sale del bucle.
+                                                        
+                                                        while (condicion) {
+                                                                    ...
+                                                                }
+                                                                              
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Bucle While");
+                                break;
+                            } else if (b == 2) {
+                                System.out.println("----------------------------------------" +
+                                        "\n Programa sumatoria de n números" +
+                                        "---------------------------------------");
+
+                                System.out.println("Digita un número hasta el cual quieras realizar" +
+                                        "la sumatoria");
+                                int num;
+                                Scanner scannernum = new Scanner(System.in);
+                                num = scannernum.nextInt();
+                                int sumatoria = 0;
+                                int x = 1;
+                                while (x <= num) {
+                                    sumatoria += x;
+                                    x++;
+                                }
+                                System.out.println(sumatoria);
+
+
+                                System.out.println("Digita Enter para regresar al menu Bucle While");
+                                break;
+                            } else {
+                                //mensaje para controla que se elija una opción correcta en menu Bucle While
+                                while (b < 0 || b > 2) {
+                                    System.out.println("Por favor digite una opcion válida del submenu Bucle While");
+                                    b = scannerb.nextInt();
+                                }
+                            }
+
+                        } while (b >= 1 || b <= 2);
+                        menu2 = scannermenu2.nextLine();
+                    } while (menu2.isEmpty());
+                    break;
+
+                case 10:
+                    do {
+                        System.out.println("---------------------------------------" +
+                                "\n          BUCLE FOR" +
+                                "\n----------------------------------------" +
+                                "\n-1.            ¿Qué es un  bucle FOR?" +
+                                "\n-2.            Programa Sumatoria de n números" +
+                                "\n-0             Salir    " +
+                                "\n Digite una opción:");
+                        b = scannerb.nextInt();
+                        if (b == 0) {
+                            System.out.println("Eligio salir del menu Bucle For, digite Enter para salir ");
+                            break;
+                        }
+                        do {
+                            if (b == 1) {
+                                System.out.println("---------------------------------------" +
+                                        "\n           ¿Qué es un  bucle FOR?" +
+                                        "\n----------------------------------------" +
+                                        """
+                                                               El bucle for sirve para ejecutar un código
+                                                               un número conocido de veces, por ejemplo 
+                                                               recorrer un array o cualquier otro tipo de 
+                                                               colección o simplemente ejecutar el código 
+                                                               un número concreto de veces.
+                                                \n
+                                                               La estructura de un ciclo for es:
+                                                               
+                                                               for (inicializacion; condicion; actualizacion) {
+                                                                                       ...
+                                                               }
+                                                """);
+                                System.out.println("Digita Enter para regresar al menu Bucle For");
+                                break;
+                            } else if (b == 2) {
+                                System.out.println("---------------------------------------" +
+                                        "\n Programa Sumatoria de n números" +
+                                        "\n ---------------------------------------");
+
+
+                                System.out.println("Se realiza una sumatoria de los numeros enteros hasta un valor x. Ingrese el valor x:");
+                                Scanner scanerx = new Scanner(System.in);
+                                int x;
+                                x = scanerx.nextInt();
+                                int suma = 0;
+
+                                for (int i = 1; i <= x; i++) {
+                                    suma += i;
+                                }
+                                System.out.println("la sumatoria es " + suma);
+
+                                System.out.println("Digita Enter para regresar al menu Bucle For");
+                                break;
+                            } else {
+                                //mensaje para controla que se elija una opción correcta en menú
+                                while (b < 0 || b > 2) {
+                                    System.out.println("Por favor digite opciones del submenu Bucle For");
+                                    b = scannerb.nextInt();
+                                }
+                            }
+                        } while (b >= 1 || b <= 2);
+                        menu2 = scannermenu2.nextLine();
+                    } while (menu2.isEmpty());
+                    break;
+                // Salir del programa.
+                case 0:
+                    System.out.println("Vas a salir del menú, presiona enter para continuar");
+                    break;
+
+            }
+            menuprincipal = scannermenuprincipal.nextLine();
+        } while (a != 0);
+        //while (menuprincipal.isEmpty()) ;
+
+    }
 }
