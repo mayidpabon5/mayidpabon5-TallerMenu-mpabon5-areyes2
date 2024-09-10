@@ -2,7 +2,6 @@ import com.sun.source.tree.WhileLoopTree;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
-
 public class Main {
     /*Taller: Crear un menú con los temas de clase*/
     public static void main(String[] args) {
@@ -656,6 +655,27 @@ public class Main {
                             } else if (b == 2) {
                                 System.out.println("----------------------------------------" +
                                         "\n Programa Adivina el número");
+
+                                int aleatorio = (int)(Math.random()*100);
+                                Scanner c = new Scanner(System.in);
+                                int numero;
+                                System.out.println("Adivina el numero, Ingresa tu numero:");
+                                numero = c.nextInt();
+
+                                while ( numero != aleatorio){
+
+                                    if (numero > aleatorio){
+                                        System.out.println("El numero es mas bajo");
+                                        System.out.println("Ingresa otro numero");
+                                        numero = c.nextInt();
+                                    }
+                                    else {
+                                        System.out.println("El numero es mas alto");
+                                        System.out.println("Ingresa otro numero");
+                                        numero = c.nextInt();
+                                    }
+                                }
+                                System.out.println("Adivinaste el numero");
 
                                 System.out.println("Digita Enter para regresar al menu Condicional SWITCH");
                                 break;

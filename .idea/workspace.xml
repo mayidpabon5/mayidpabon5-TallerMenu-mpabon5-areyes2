@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1c3a4e6-a3f9-44e7-8248-1bfcf8cb2535" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a4529a5d-e0a0-4341-9ac7-b4a2eee46775" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Calificaciones/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calificaciones/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calificaciones/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calificaciones/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calificaciones/prueba.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calificaciones/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Numero Mayor/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Numero Mayor/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Numero Mayor/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Numero Mayor/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Numero Mayor/Numero Mayor.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Numero Mayor/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,61 +24,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2lOXnkzGdFSLpmeEGPa7buPOM99" />
+  <component name="ProjectId" id="2ltnzxdRTKTcOG7EBlyh02M2tA2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/PROYECTOSJAVA/PROGRAMACION/TALLER",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="MenuInteractivo" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="MenuInteractivo" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b1c3a4e6-a3f9-44e7-8248-1bfcf8cb2535" name="Changes" comment="" />
-      <created>1725052267738</created>
+      <changelist id="a4529a5d-e0a0-4341-9ac7-b4a2eee46775" name="Changes" comment="" />
+      <created>1726008507907</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1725052267738</updated>
+      <updated>1726008507907</updated>
     </task>
     <servers />
   </component>
